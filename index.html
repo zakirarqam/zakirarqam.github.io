@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqam Zakir</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js";
+        import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyA9r7dmo43Pw6OJh-UlZRpAPNIf4AIL4i8",
+          authDomain: "arqam-21.firebaseapp.com",
+          databaseURL: "https://arqam-21-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "arqam-21",
+          storageBucket: "arqam-21.appspot.com",
+          messagingSenderId: "751936143391",
+          appId: "1:751936143391:web:0077a66ca46e58ba4c952a"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        
+
+        document.getElementById("userform").addEventListener("submit", function(e){
+            e.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+            set(ref(db, 'users/' + name), {
+                email: email,
+                subject: subject,
+                message:message,
+                
+        });
+    });
+
+
+      </script>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container flex-lg-column">
+            <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
+                <span class="h3 fw-bold d-block d-lg-none">Arqam Zakir</span>
+                <img src="./assets/images/2022_02_24_16_59_IMG_4766.JPG" class="d-none d-lg-block rounded-circle" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Education">Education</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- //NAVBAR -->
+
+    <!-- CONTENT WRAPPER -->
+    <div id="content-wrapper">
+
+        <!-- HOME -->
+        <section id="home" class="full-height px-lg-5">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h1 class="display-4 fw-bold" data-aos="fade-up">I'M  <span class="text-brand">
+                            ARQAM ZAKIR</span> FROM SRILANKA</h1>
+                        <p class="lead mt-2 mb-4" data-aos="fade-up" data-aos-delay="600">I am a student at University of Moratuwa</p>
+                        <div data-aos="fade-up" data-aos-delay="900">
+                            <a href="#work" class="btn btn-brand me-3">Explore My Work</a>
+                            <a href="#" class="link-custom">contact:zakiarkam@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- //HOME -->
+
+        <!-- SERVICES -->
+        <section id="services" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">SERVICES</h6>
+                        <h1>Services That I can do..</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-md-4" data-aos="fade-up">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-file"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">GRAPHIC DESIGN</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="lab la-hackerrank"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">PROBLEM SOLVING</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="900">
+                        <div class="service p-4 bg-base rounded-4 shadow-effect">
+                            <div class="iconbox rounded-4">
+                                <i class="las la-laptop-code"></i>
+                            </div>
+                            <h5 class="mt-4 mb-2">Web Designing</h5>
+                            <p>I craft high-performing and delightful experiences tailored and conversion-focused</p>
+                            <a href="#" class="link-custom">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- SERVICES -->
+
+        
+        <!-- education -->
+        <section id="Education" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">EDUCATION</h6>
+                        <h1>My Education up to present</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-5">
+                    <div class="col-lg-6">
+
+                        <div class="row gy-4">
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="900">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Reading Bsc(Hons) in IT&M</h4>
+                                    <p class="text-brand mb-2">University of Moratuwa</p>
+                                    <p class="mb-0">presently reading Bsc(hons) degree in University of Moratuwa Srilanka.</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="950">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Finished A/L EXAM</h4>
+                                    <p class="text-brand mb-2">Al-Minhaj National School (2017 - 2020)</p>
+                                    <p class="mb-0">I did my A/L's in physical science stream & I passed the examination.</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-12" data-aos="fade-up" data-aos-delay="1000">
+                                <div class="bg-base p-4 rounded-4 shadow-effect">
+                                    <h4>Finished 0/L EXAM</h4>
+                                    <p class="text-brand mb-2">Al-Minhaj National School (2007 - 2017)</p>
+                                    <p class="mb-0">I have passed the my O/L examination.</p>
+                                    <p class="mb-0">
+                                        <table class="table-danger">
+                                            <tr>
+                                                <td colspan="2" class="td1">English</td>
+                                                <td class="td2">A</td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" class="td1">Maths</td>
+                                                <td class="td2">O/L</td>
+                                                <td class="td2" >A/L</td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td>A</td>
+                                                <td>B</td>
+                                            </tr>
+                                        </table>
+                                    </p>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- //education -->
+
+        <!-- REVIEWS -->
+        <section id="about" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row pb-4" data-aos="fade-up">
+                    <div class="col-lg-8">
+                        <h6 class="text-brand">ABOUT</h6>
+                        <h1> About Me</h1>
+                    </div>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8" data-aos="fade-up">
+
+                        <div class="review shadow-effect bg-base p-4 rounded-4">
+                            <h5 class="mt-4 mb-2">"we will conquer both worlds with knowledge"</h5>
+                            <p>I am arqam zakir,  from hapugastalawa. I am presently reading Bsc(HONS) in IT&M from the University of Moratuwa , SriLanka.
+                                 Moreover, I am proficient as well as a capable and confident person. I have learned to be very hard-working as well as passionate about my career from the very core.
+                                  Since my childhood, I have always been trained to focus on my passion.
+
+                                  <br>
+                                I never pursued bookish knowledge and it is certainly true that only a book doesn’t let you have sufficient experience and knowledge about the practical world.
+                                I want is to be successful in IT Industry and to rule the world.
+                                 </p>
+                        </div>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- //REVIEWS -->
+
+        
+        <!-- CONTACT -->
+        <section id="contact" class="full-height px-lg-5">
+            <div class="container">
+
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8 pb-4" data-aos="fade-up">
+                        <h6 class="text-brand">CONTACT</h6>
+                        <h1>Interested in working together? Let's talk....
+                        </h1>
+                    </div>
+
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="600">
+                        <form method="post" id="userform"  action="#" class=" row g-lg-3 gy-3">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="Enter your name" id="name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="email" class="form-control" placeholder="Enter your email" id="email">
+                            </div>
+                            <div class="form-group col-12">
+                                <input type="text" class="form-control" placeholder="Enter subject" id="subject">
+                            </div>
+                            <div class="form-group col-12">
+                                <textarea name="" rows="4" class="form-control" placeholder="Enter your message" id="message"></textarea>
+                            </div>
+                            <div class="form-group col-12 d-grid">
+                                <input type="submit" class="btn btn-brand" value="contact me">
+                            </div>
+                        </form>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- //CONTACT -->
+
+        <!-- FOOTER -->
+        <footer class="py-5 px-lg-5">
+            <div class="container">
+                <div class="row gy-4 justify-content-between">
+                    <div class="col-auto">
+                        <p class="mb-0">Designed by <a href="#" class="fw-bold">ARQAM</a></p>
+                    </div>
+                    <div class="col-auto">
+                        <div class="social-icons">
+                            <a href="https://twitter.com/zakiarkam?s=11&t=Nx1qdUJ8_8oQrCmr-4ArDg"><i class="lab la-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/arqam-zakir-627181248"><i class="lab la-linkedin-in"></i></a>
+                            <a href="#"><i class="lab la-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //FOOTER -->
+
+    </div>
+    <!-- //CONTENT WRAPPER -->
+
+
+
+    
+    <script type="module" src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+  
+</body>
+
+</html>
